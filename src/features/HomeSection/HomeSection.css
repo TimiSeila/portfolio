@@ -71,7 +71,7 @@
 
 .homesection-about-button:hover {
   cursor: pointer;
-  box-shadow: inset 100% 0 0 0 #ff8f5c;
+  background-color: #ff8f5c;
 }
 
 /* Homesection Chevron */

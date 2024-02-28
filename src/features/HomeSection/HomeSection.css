@@ -9,11 +9,27 @@
     ". . chevron chevron . .";
 }
 
+.homesection-parallax {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+
+.homesection-parallax .parallax-item {
+  padding: 20px;
+}
+
 /* Homesection Socials */
 .homesection-socials-container {
   grid-area: socials;
   display: flex;
   justify-content: center;
+  z-index: 5;
 }
 
 .homesection-socials-icon {
@@ -33,6 +49,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  z-index: 5;
 }
 
 .homesection-header-name {
@@ -55,6 +72,7 @@
   grid-area: button;
   align-items: center;
   justify-content: center;
+  z-index: 5;
 }
 
 .homesection-about-button {
@@ -80,6 +98,7 @@
   display: flex;
   align-items: flex-end;
   justify-content: center;
+  z-index: 5;
 }
 
 .homesection-chevron {

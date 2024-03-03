@@ -1,10 +1,21 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { FaChevronDown, FaGithub, FaLinkedin } from "react-icons/fa";
 import { IoTriangleOutline, IoSquareOutline } from "react-icons/io5";
 import { MdOutlineCircle } from "react-icons/md";
 import "./HomeSection.css";
+import Modal from "../AboutSection/AboutModal";
 
 const HomeSection = () => {
+  const [aboutModalOpen, setAboutModalOpen] = useState(false);
+
+  const openModal = () => {
+    setAboutModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setAboutModalOpen(false);
+  };
+
   const redirect = (url) => {
     window.open(url, "_blank");
   };
@@ -83,12 +94,15 @@ const HomeSection = () => {
           <p className="homesection-header-desc">Software developer</p>
         </div>
         <div className="homesection-about-button-container">
-          <button className="homesection-about-button">About Me</button>
+          <button className="homesection-about-button" onClick={openModal}>
+            About Me
+          </button>
         </div>
         <div className="homesection-chevron-container">
           <FaChevronDown className="homesection-chevron" />
         </div>
       </div>
+      <Modal isOpen={aboutModalOpen} onClose={closeModal} />
     </>
   );
 };

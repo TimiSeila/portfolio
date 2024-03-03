@@ -1,0 +1,154 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+.modal {
+  background: #23353e;
+  padding: 20px;
+  border-radius: 8px;
+  width: 70%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-close {
+  position: relative;
+  top: 0px;
+  right: 0px;
+  cursor: pointer;
+  border: none;
+  background: none;
+  color: #34c45a;
+  font-size: 24px;
+}
+
+.modal-close:hover {
+  color: #ff8f5c;
+}
+
+.modal-container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.about-me-container {
+  width: 45%;
+  padding: 0 36px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 56px;
+}
+
+.about-me-info-container {
+  color: white;
+}
+
+.about-me-technologies-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.tech-info {
+  font-style: italic;
+  color: #34c45a;
+}
+
+.about-me-tech-icon {
+  color: white;
+  font-size: 56px;
+}
+
+.dividers-container {
+  width: 10%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.divider-one {
+  width: 2px;
+  background-color: #34c45a;
+  height: 90%;
+}
+
+.divider-two {
+  width: 2px;
+  background-color: #ff8f5c;
+  height: 90%;
+}
+
+.contact-me-container {
+  width: 45%;
+  padding: 0 36px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.contact-me-container h1 {
+  color: white;
+}
+
+.contact-me-container p {
+  color: white;
+  font-style: italic;
+}
+
+.contact-me-inputfield {
+  background: none;
+  border: none;
+  border-bottom: 2px solid #ff8f5c;
+  text-align: right;
+  color: white;
+  width: 80%;
+  vertical-align: baseline;
+  font-family: Josefin Sans;
+  font-size: 16px;
+  padding: 6px 0;
+}
+
+.contact-me-inputfield:focus {
+  outline: none;
+}
+
+.contact-me-container label {
+  color: #ff8f5c;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 100%;
+  margin: 26px 0;
+}
+
+.contact-me-container form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: flex-end;
+}
+
+.contact-me-submit {
+  border: none;
+  background-color: #ff8f5c;
+  color: white;
+  font-family: Josefin Sans;
+  padding: 12px 32px;
+}
+
+.contact-me-submit:hover {
+  background-color: #34c45a;
+  cursor: pointer;
+}

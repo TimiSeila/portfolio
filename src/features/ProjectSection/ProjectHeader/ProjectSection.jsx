@@ -29,7 +29,10 @@ const ProjectSection = ({ projectInfo }) => {
               <p>{projectInfo.desc}</p>
             </div>
             <div>
-              <Technologies technologies={projectInfo.technologies} />
+              <Technologies
+                technologies={projectInfo.technologies}
+                nameForClass="tech-icon"
+              />
             </div>
           </div>
         </div>
@@ -41,6 +44,9 @@ const ProjectSection = ({ projectInfo }) => {
             Try Demo!
           </button>
         ) : null}
+        <p className="source-link" onClick={() => redirect(projectInfo.github)}>
+          See source code here!
+        </p>
       </div>
     </>
   );

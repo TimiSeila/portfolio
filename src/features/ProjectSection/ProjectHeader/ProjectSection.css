@@ -82,6 +82,15 @@
   background-color: #ff8f5c;
 }
 
+.source-link {
+  color: #34c45a;
+  cursor: pointer;
+}
+
+.source-link:hover {
+  color: #ff8f5c;
+}
+
 .tech-icon {
   padding-top: 40px;
   font-size: 50px;

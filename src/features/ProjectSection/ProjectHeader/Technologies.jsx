@@ -2,12 +2,14 @@ import React from "react";
 import { FaReact } from "react-icons/fa";
 import { IoLogoJavascript } from "react-icons/io5";
 import { IoLogoFirebase } from "react-icons/io5";
+import { FaUnity } from "react-icons/fa";
 
-const Technologies = ({ technologies }) => {
+const Technologies = ({ technologies, nameForClass }) => {
   const iconComponents = {
-    react: <FaReact className="tech-icon" />,
-    javascript: <IoLogoJavascript className="tech-icon" />,
-    firebase: <IoLogoFirebase className="tech-icon" />,
+    react: <FaReact className={nameForClass} />,
+    javascript: <IoLogoJavascript className={nameForClass} />,
+    firebase: <IoLogoFirebase className={nameForClass} />,
+    unity: <FaUnity className={nameForClass} />,
   };
 
   const filteredTechnologies = Object.keys(iconComponents).filter((tech) =>

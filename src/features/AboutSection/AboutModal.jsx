@@ -33,6 +33,7 @@ const Modal = ({ isOpen, onClose }) => {
       setMessageSent(true);
     } catch (err) {
       console.error(err);
+      setMessageError(true);
     } finally {
       setLoading(false);
       setName("");

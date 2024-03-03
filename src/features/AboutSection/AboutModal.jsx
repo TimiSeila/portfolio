@@ -7,12 +7,20 @@ const Modal = ({ isOpen, onClose }) => {
   if (!isOpen) return null;
 
   const form = useRef();
+
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+
+  const [loading, setLoading] = useState(false);
   const [messageSent, setMessageSent] = useState(false);
+  const [messageError, setMessageError] = useState(false);
 
   const sendEmail = async (e) => {
     e.preventDefault();
-
     try {
+      setLoading(true);
+
       await emailjs.sendForm(
         "service_3681q3l",
         "template_w42z98i",
@@ -21,10 +29,15 @@ const Modal = ({ isOpen, onClose }) => {
           publicKey: "9xXTDVqww8lkgHFYh",
         }
       );
+
       setMessageSent(true);
-      form.current.reset();
     } catch (err) {
       console.error(err);
+    } finally {
+      setLoading(false);
+      setName("");
+      setEmail("");
+      setMessage("");
     }
   };
 
@@ -74,6 +87,9 @@ const Modal = ({ isOpen, onClose }) => {
                   autoComplete="off"
                   type="text"
                   name="name"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                  required
                 />
               </label>
               <label>
@@ -81,8 +97,11 @@ const Modal = ({ isOpen, onClose }) => {
                 <input
                   className="contact-me-inputfield"
                   autoComplete="off"
-                  type="text"
+                  type="email"
                   name="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  required
                 />
               </label>
               <label>
@@ -92,7 +111,7 @@ const Modal = ({ isOpen, onClose }) => {
                   autoComplete="off"
                   type="text"
                   name="message"
-                  rows="1"
+                  rows="3"
                   style={{
                     boxSizing: "border-box",
                     minWidth: "80%",
@@ -100,15 +119,22 @@ const Modal = ({ isOpen, onClose }) => {
                     minHeight: "30px",
                     maxHeight: "180px",
                   }}
+                  value={message}
+                  onChange={(e) => setMessage(e.target.value)}
+                  required
                 />
               </label>
               <input
                 type="submit"
-                value="Send Message"
+                value={loading ? "Sending..." : "Send Message"}
                 className="contact-me-submit"
               />
             </form>
-            {messageSent ? <p>Message sent successfully!</p> : null}
+            {messageSent ? (
+              <p>Message sent successfully!</p>
+            ) : messageError ? (
+              <p>An error has occured, Message not sent!</p>
+            ) : null}
           </div>
         </div>
       </div>

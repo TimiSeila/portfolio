@@ -3,11 +3,13 @@ import "./AboutModal.css";
 import Technologies from "../ProjectSection/ProjectHeader/Technologies";
 import emailjs from "@emailjs/browser";
 
+//Modal component
 const Modal = ({ isOpen, onClose }) => {
   if (!isOpen) return null;
 
-  const form = useRef();
+  const contactForm = useRef();
 
+  //State variables fro managing form input values
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
@@ -16,15 +18,15 @@ const Modal = ({ isOpen, onClose }) => {
   const [messageSent, setMessageSent] = useState(false);
   const [messageError, setMessageError] = useState(false);
 
+  //Handles the form submission to send an email using the emailjs library.
   const sendEmail = async (e) => {
     e.preventDefault();
     try {
       setLoading(true);
-
       await emailjs.sendForm(
         "service_3681q3l",
         "template_w42z98i",
-        form.current,
+        contactForm.current,
         {
           publicKey: "9xXTDVqww8lkgHFYh",
         }
@@ -80,7 +82,7 @@ const Modal = ({ isOpen, onClose }) => {
           <div className="contact-me-container">
             <h1>Get in touch</h1>
             <p>Job offers, questions or just chat!</p>
-            <form ref={form} onSubmit={sendEmail}>
+            <form ref={contactForm} onSubmit={sendEmail}>
               <label>
                 Name
                 <input
@@ -112,7 +114,7 @@ const Modal = ({ isOpen, onClose }) => {
                   autoComplete="off"
                   type="text"
                   name="message"
-                  rows="3"
+                  rows="6"
                   style={{
                     boxSizing: "border-box",
                     minWidth: "80%",

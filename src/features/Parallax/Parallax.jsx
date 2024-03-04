@@ -21,10 +21,14 @@ const Parallax = () => {
     };
   }, []);
 
-  const generateRandomNumber = (min, max) => {
+  const generateRandomNumber = (min, max, excludeZero = false) => {
     const randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
 
-    return randomNumber;
+    return excludeZero
+      ? randomNumber == 0
+        ? randomNumber + 1
+        : randomNumber
+      : randomNumber;
   };
 
   const generateRandomIcon = () => {
@@ -32,7 +36,7 @@ const Parallax = () => {
       case 1:
         return (
           <IoSquareOutline
-            data={generateRandomNumber(-10, 10)}
+            data={generateRandomNumber(-10, 10, true)}
             className="parallax-item"
             size={width / 10}
             color={iconColors[generateRandomNumber(0, 2)]}
@@ -41,7 +45,7 @@ const Parallax = () => {
       case 2:
         return (
           <IoTriangleOutline
-            data={generateRandomNumber(-10, 10)}
+            data={generateRandomNumber(-10, 10, true)}
             className="parallax-item"
             size={width / 10}
             color={iconColors[generateRandomNumber(0, 2)]}
@@ -50,7 +54,7 @@ const Parallax = () => {
       case 3:
         return (
           <IoEllipseOutline
-            data={generateRandomNumber(-10, 10)}
+            data={generateRandomNumber(-10, 10, true)}
             className="parallax-item"
             size={width / 10}
             color={iconColors[generateRandomNumber(0, 2)]}

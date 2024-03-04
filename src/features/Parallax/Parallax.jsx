@@ -41,7 +41,7 @@ const Parallax = () => {
           <IoSquareOutline
             data={generateRandomNumber(-10, 10, true)}
             className="parallax-item"
-            size={width / 10}
+            size={width / 25}
             color={iconColors[generateRandomNumber(0, 2)]}
           />
         );
@@ -50,7 +50,7 @@ const Parallax = () => {
           <IoTriangleOutline
             data={generateRandomNumber(-10, 10, true)}
             className="parallax-item"
-            size={width / 10}
+            size={width / 25}
             color={iconColors[generateRandomNumber(0, 2)]}
           />
         );
@@ -59,7 +59,7 @@ const Parallax = () => {
           <IoEllipseOutline
             data={generateRandomNumber(-10, 10, true)}
             className="parallax-item"
-            size={width / 10}
+            size={width / 25}
             color={iconColors[generateRandomNumber(0, 2)]}
           />
         );
@@ -70,7 +70,7 @@ const Parallax = () => {
     const imageArray = Array.from(
       {
         length:
-          Math.round(height / (width / 10)) * Math.round(width / (width / 10)),
+          Math.round(height / (width / 25)) * Math.round(width / (width / 25)),
       },
       (_, index) => (
         <React.Fragment key={index}>{generateRandomIcon()}</React.Fragment>

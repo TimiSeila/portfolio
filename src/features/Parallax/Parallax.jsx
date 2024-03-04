@@ -10,6 +10,7 @@ const Parallax = () => {
   const [width, setWidth] = useState(window.innerWidth);
   const [height, setHeight] = useState(window.innerHeight);
 
+  console.log(width / 10);
   useEffect(() => {
     const handleResize = () => {
       setWidth(window.innerWidth);

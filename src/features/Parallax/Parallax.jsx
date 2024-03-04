@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import {
   IoTriangleOutline,
   IoSquareOutline,
@@ -7,14 +7,16 @@ import {
 
 const Parallax = () => {
   const iconColors = ["#000", "#34c45a", "#ff8f5c"];
-  const [width, setWidth] = useState(window.innerWidth);
-  const [height, setHeight] = useState(window.innerHeight);
+  const pContainer = useRef();
+  const [width, setWidth] = useState(0);
+  const [height, setHeight] = useState(0);
 
-  console.log(width / 10);
   useEffect(() => {
+    setWidth(pContainer.current.offsetWidth);
+    setHeight(pContainer.current.offsetHeight);
     const handleResize = () => {
-      setWidth(window.innerWidth);
-      setHeight(window.innerHeight);
+      setWidth(pContainer.current.offsetWidth);
+      setHeight(pContainer.current.offsetHeight);
     };
     window.addEventListener("resize", handleResize);
     return () => {
@@ -96,7 +98,11 @@ const Parallax = () => {
     };
   }, []);
 
-  return <div className="homesection-parallax">{renderImages()}</div>;
+  return (
+    <div className="homesection-parallax" ref={pContainer}>
+      {renderImages()}
+    </div>
+  );
 };
 
 export default Parallax;

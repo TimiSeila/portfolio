@@ -47,98 +47,95 @@ const Modal = ({ isOpen, onClose }) => {
   return (
     <div className="modal-overlay">
       <div className="modal">
-        <button className="modal-close" onClick={onClose}>
-          X
-        </button>
-        <div className="modal-container">
-          <div className="about-me-container">
-            <div className="about-me-info-container">
-              <h1>About me</h1>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
-                enim arcu, sagittis in ultricies vestibulum, sollicitudin quis
-                risus. Nullam accumsan scelerisque mi. Vivamus porttitor, arcu
-                et consectetur volutpat, ligula libero mattis leo, eu semper leo
-                nisl ut nisl. In tempus vel purus sed tempus. Fusce cursus ut
-                arcu ultricies faucibus. Aliquam pharetra arcu vel nisi feugiat
-                eleifend. Fusce viverra, ante tincidunt gravida facilisis,
-                turpis nisi commodo massa, vel tincidunt tellus mauris quis
-                orci. Nulla ac ex eget erat imperdiet scelerisque at id felis.
-                Ut venenatis libero nec velit molestie, eu aliquet nisi tempus.
-              </p>
-            </div>
-            <div className="about-me-technologies-container">
-              <p className="tech-info">Technologies I'm familiar with</p>
-              <Technologies
-                technologies={["react", "javascript", "firebase", "unity"]}
-                nameForClass="about-me-tech-icon"
-              />
-            </div>
+        <div className="about-me-container">
+          <div className="about-me-info-container">
+            <h1>About me</h1>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
+              enim arcu, sagittis in ultricies vestibulum, sollicitudin quis
+              risus. Nullam accumsan scelerisque mi. Vivamus porttitor, arcu et
+              consectetur volutpat, ligula libero mattis leo, eu semper leo nisl
+              ut nisl. In tempus vel purus sed tempus. Fusce cursus ut arcu
+              ultricies faucibus. Aliquam pharetra arcu vel nisi feugiat
+              eleifend. Fusce viverra, ante tincidunt gravida facilisis, turpis
+              nisi commodo massa, vel tincidunt tellus mauris quis orci. Nulla
+              ac ex eget erat imperdiet scelerisque at id felis. Ut venenatis
+              libero nec velit molestie, eu aliquet nisi tempus.
+            </p>
           </div>
+          <div className="about-me-technologies-container">
+            <p className="tech-info">Technologies I'm familiar with</p>
+            <Technologies
+              technologies={["react", "javascript", "firebase", "unity"]}
+              nameForClass="about-me-tech-icon"
+            />
+          </div>
+        </div>
+        <div className="middle-container">
+          <button className="modal-close" onClick={onClose}>
+            X
+          </button>
           <div className="dividers-container">
             <div className="divider-one"></div>
             <div className="divider-two"></div>
           </div>
-          <div className="contact-me-container">
-            <h1>Get in touch</h1>
-            <p>Job offers, questions or just chat!</p>
-            <form ref={contactForm} onSubmit={sendEmail}>
-              <label>
-                Name
-                <input
-                  className="contact-me-inputfield"
-                  autoComplete="off"
-                  type="text"
-                  name="name"
-                  value={name}
-                  onChange={(e) => setName(e.target.value)}
-                  required
-                />
-              </label>
-              <label>
-                Email
-                <input
-                  className="contact-me-inputfield"
-                  autoComplete="off"
-                  type="email"
-                  name="email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  required
-                />
-              </label>
-              <label>
-                Message
-                <textarea
-                  className="contact-me-inputfield"
-                  autoComplete="off"
-                  type="text"
-                  name="message"
-                  rows="6"
-                  style={{
-                    boxSizing: "border-box",
-                    minWidth: "80%",
-                    maxWidth: "80%",
-                    minHeight: "30px",
-                    maxHeight: "180px",
-                  }}
-                  value={message}
-                  onChange={(e) => setMessage(e.target.value)}
-                  required
-                />
-              </label>
+        </div>
+        <div className="contact-me-container">
+          <h1>Get in touch</h1>
+          <p>Job offers, questions or just chat!</p>
+          <form ref={contactForm} onSubmit={sendEmail}>
+            <label>
+              Name
               <input
-                type="submit"
-                value={loading ? "Sending..." : "Send Message"}
-                className="contact-me-submit"
+                className="contact-me-inputfield"
+                autoComplete="off"
+                type="text"
+                name="name"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                required
               />
-            </form>
-            {messageSent ? (
-              <p>Message sent successfully!</p>
-            ) : messageError ? (
-              <p>An error has occured, Message not sent!</p>
-            ) : null}
-          </div>
+            </label>
+            <label>
+              Email
+              <input
+                className="contact-me-inputfield"
+                autoComplete="off"
+                type="email"
+                name="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
+              />
+            </label>
+            <label>
+              Message
+              <textarea
+                className="contact-me-inputfield"
+                autoComplete="off"
+                type="text"
+                name="message"
+                rows="6"
+                style={{
+                  resize: "none",
+                  height: "12vh",
+                }}
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
+                required
+              />
+            </label>
+            <input
+              type="submit"
+              value={loading ? "Sending..." : "Send Message"}
+              className="contact-me-submit"
+            />
+          </form>
+          {messageSent ? (
+            <p>Message sent successfully!</p>
+          ) : messageError ? (
+            <p>An error has occured, Message not sent!</p>
+          ) : null}
         </div>
       </div>
     </div>

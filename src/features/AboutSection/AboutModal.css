@@ -13,45 +13,30 @@
 
 .modal {
   background: #23353e;
-  padding: 20px;
   width: 70%;
   height: 80%;
   display: flex;
-  flex-direction: column;
-}
-
-.modal-close {
-  position: relative;
-  top: 0px;
-  right: 0px;
-  cursor: pointer;
-  border: none;
-  background: none;
-  color: #34c45a;
-  font-size: 24px;
-}
-
-.modal-close:hover {
-  color: #ff8f5c;
-}
-
-.modal-container {
-  display: flex;
-  width: 100%;
-  height: 100%;
+  padding: 3vh 4vw;
 }
 
 .about-me-container {
   width: 45%;
-  padding: 0 36px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin-bottom: 56px;
+  margin-bottom: 6vh;
 }
 
 .about-me-info-container {
   color: white;
+}
+
+.about-me-info-container h1 {
+  font-size: 3vw;
+}
+
+.about-me-info-container p {
+  font-size: 1.3vw;
 }
 
 .about-me-technologies-container {
@@ -62,36 +47,57 @@
 
 .tech-info {
   font-style: italic;
+  font-size: 1.3vw;
   color: #34c45a;
 }
 
 .about-me-tech-icon {
   color: white;
-  font-size: 56px;
+  font-size: 5vw;
+}
+
+.middle-container {
+  width: 10%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 0 4vw;
+}
+
+.modal-close {
+  cursor: pointer;
+  border: none;
+  background: none;
+  color: #34c45a;
+  font-size: 2vw;
+}
+
+.modal-close:hover {
+  color: #ff8f5c;
 }
 
 .dividers-container {
-  width: 10%;
   display: flex;
   justify-content: space-around;
   align-items: center;
+  width: 100%;
+  height: 100%;
 }
 
 .divider-one {
-  width: 2px;
+  width: 0.2vw;
   background-color: #34c45a;
-  height: 90%;
+  height: 70%;
 }
 
 .divider-two {
-  width: 2px;
+  width: 0.2vw;
   background-color: #ff8f5c;
-  height: 90%;
+  height: 70%;
 }
 
 .contact-me-container {
   width: 45%;
-  padding: 0 36px;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -99,24 +105,26 @@
 
 .contact-me-container h1 {
   color: white;
+  font-size: 3vw;
 }
 
 .contact-me-container p {
   color: white;
   font-style: italic;
+  font-size: 1.3vw;
 }
 
 .contact-me-inputfield {
   background: none;
   border: none;
-  border-bottom: 2px solid #ff8f5c;
+  border-bottom: 0.3vh solid #ff8f5c;
   text-align: right;
   color: white;
   width: 80%;
   vertical-align: baseline;
   font-family: Josefin Sans;
-  font-size: 16px;
-  padding: 6px 0;
+  font-size: 1.5vw;
+  padding: 0.7vh 0;
 }
 
 .contact-me-inputfield:focus {
@@ -124,12 +132,13 @@
 }
 
 .contact-me-container label {
+  font-size: 1.3vw;
   color: #ff8f5c;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   width: 100%;
-  margin: 26px 0;
+  margin-bottom: 6vh;
 }
 
 .contact-me-container form {
@@ -140,11 +149,12 @@
 }
 
 .contact-me-submit {
+  font-size: 1.3vw;
   border: none;
   background-color: #ff8f5c;
   color: white;
   font-family: Josefin Sans;
-  padding: 12px 32px;
+  padding: 2vh 3vw;
 }
 
 .contact-me-submit:hover {

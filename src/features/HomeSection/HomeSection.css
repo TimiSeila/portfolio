@@ -35,8 +35,8 @@
 
 .homesection-socials-icon {
   color: #fff;
-  font-size: 46px;
-  margin: 20px 30px;
+  font-size: 3vw;
+  margin: 1vw 1.5vw;
 }
 
 .homesection-socials-icon:hover {
@@ -56,14 +56,14 @@
 .homesection-header-name {
   margin: 0;
   color: #fff;
-  font-size: 96px;
+  font-size: 7vw;
   font-weight: 400;
 }
 
 .homesection-header-desc {
   margin: 0;
   color: #fff;
-  font-size: 24px;
+  font-size: 2vw;
   font-weight: 300;
 }
 
@@ -82,7 +82,7 @@
   border: none;
   color: white;
   background-color: #34c45a;
-  font-size: 32px;
+  font-size: 2vw;
   font-family: Josefin Sans;
   font-weight: 700;
   transition: 0.6s ease-in-out;

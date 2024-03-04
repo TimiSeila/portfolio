@@ -21,7 +21,7 @@ const HomeSection = () => {
 
   return (
     <>
-      <Parallax />
+      {window.innerWidth <= 1024 ? null : <Parallax />}
       <div className="homesection-container">
         <div className="homesection-socials-container">
           <FaGithub

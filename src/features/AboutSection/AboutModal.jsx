@@ -51,16 +51,22 @@ const Modal = ({ isOpen, onClose }) => {
           <div className="about-me-info-container">
             <h1>About me</h1>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
-              enim arcu, sagittis in ultricies vestibulum, sollicitudin quis
-              risus. Nullam accumsan scelerisque mi. Vivamus porttitor, arcu et
-              consectetur volutpat, ligula libero mattis leo, eu semper leo nisl
-              ut nisl. In tempus vel purus sed tempus. Fusce cursus ut arcu
-              ultricies faucibus. Aliquam pharetra arcu vel nisi feugiat
-              eleifend. Fusce viverra, ante tincidunt gravida facilisis, turpis
-              nisi commodo massa, vel tincidunt tellus mauris quis orci. Nulla
-              ac ex eget erat imperdiet scelerisque at id felis. Ut venenatis
-              libero nec velit molestie, eu aliquet nisi tempus.
+              Olen motivoitunut ohjelmistokehittäjä, jolla on vankka tekninen
+              osaaminen ja monipuolinen kokemus erilaisista projekteista. Olen
+              suorittamassa tieto- ja viestintätekniikan perustutkintoa Business
+              College Helsingissä, ja olen sitoutunut jatkamaan oppimista
+              alallani.
+              <br />
+              <br /> Tavoitteenani on hyödyntää teknistä osaamistani ja
+              luovuuttani töissä ja tulevissa projekteissani. Olen innokas
+              oppimaan uutta ja uskon jatkuvaan kehitykseen
+              ohjelmistokehityksessä. Olen työskennellyt eri projekteissa, mikä
+              on antanut minulle laajan käsityksen eri teknologioista ja
+              ohjelmointikielistä.
+              <br />
+              <br /> Olen valmis ottamaan vastuuta ja kohtaamaan uusia
+              haasteita. Innolla odotan mahdollisuutta tuoda osaamiseni ja
+              kokemukseni käyttöönne sekä oppia lisää alastamme.
             </p>
           </div>
           <div className="about-me-technologies-container">
@@ -115,10 +121,9 @@ const Modal = ({ isOpen, onClose }) => {
                 autoComplete="off"
                 type="text"
                 name="message"
-                rows="6"
                 style={{
                   resize: "none",
-                  height: "12vh",
+                  height: "8vh",
                 }}
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}

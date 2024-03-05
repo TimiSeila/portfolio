@@ -6,9 +6,9 @@ import { FaUnity } from "react-icons/fa";
 
 const Technologies = ({ technologies, nameForClass }) => {
   const iconComponents = {
-    react: <FaReact className={nameForClass} />,
-    javascript: <IoLogoJavascript className={nameForClass} />,
-    firebase: <IoLogoFirebase className={nameForClass} />,
+    react: <FaReact className={nameForClass} color="61dbfb" />,
+    javascript: <IoLogoJavascript className={nameForClass} color="#f7df1e" />,
+    firebase: <IoLogoFirebase className={nameForClass} color="#ffa000" />,
     unity: <FaUnity className={nameForClass} />,
   };
 

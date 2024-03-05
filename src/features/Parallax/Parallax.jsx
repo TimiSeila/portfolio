@@ -6,7 +6,7 @@ import {
 } from "react-icons/io5";
 
 const Parallax = () => {
-  const iconColors = ["#000", "#34c45a", "#ff8f5c"];
+  const iconColors = ["#ccde85", "#34c45a", "#ff8f5c"];
   const pContainer = useRef();
   const [width, setWidth] = useState(0);
   const [height, setHeight] = useState(0);

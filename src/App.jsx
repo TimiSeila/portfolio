@@ -8,10 +8,6 @@ import {
 } from "./projects/projectInfos";
 
 function App() {
-  useEffect(() => {
-    console.log(window.innerHeight, innerHeight);
-  }, []);
-
   return (
     <>
       <HomeSection />

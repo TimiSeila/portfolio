@@ -16,7 +16,7 @@ const ProjectSection = ({ projectInfo }) => {
             {projectInfo.img ? (
               <img src={projectInfo.img} alt="project-gif" />
             ) : projectInfo.video ? (
-              <video height={360} autoPlay muted loop>
+              <video autoPlay muted loop>
                 <source src={projectInfo.video} type="video/mp4" />
               </video>
             ) : null}

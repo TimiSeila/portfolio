@@ -11,6 +11,9 @@ const ProjectSection = ({ projectInfo }) => {
     <>
       <div className="project-container">
         <h1 className="project-number">{projectInfo.number}</h1>
+        {projectInfo.inProgress ? (
+          <h1 className="project-in-progress-text">Unfinished, In Progress!</h1>
+        ) : null}
         <div className="project-content-container">
           <div className="project-media-container">
             {projectInfo.img ? (
@@ -41,7 +44,7 @@ const ProjectSection = ({ projectInfo }) => {
             className="demo-btn"
             onClick={() => redirect(projectInfo.demo)}
           >
-            Try Demo!
+            {projectInfo.inProgress ? "Try Prototype!" : "Try Demo!"}
           </button>
         ) : null}
         <p className="source-link" onClick={() => redirect(projectInfo.github)}>

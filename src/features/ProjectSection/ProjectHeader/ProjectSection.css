@@ -4,6 +4,14 @@
   font-size: 6vw;
 }
 
+.project-in-progress-text {
+  color: #ff8f5c;
+  font-size: 2vw;
+  border-radius: 1vw;
+  border: 0.5vh solid;
+  padding: 2vh 2vw;
+}
+
 .project-container {
   box-sizing: border-box;
   display: flex;

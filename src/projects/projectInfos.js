@@ -3,6 +3,7 @@ import todoVideo from "../assets/videos/todo-video.mp4";
 
 export const gestureControlProjectInfo = {
   number: "01",
+  inProgress: true,
   img: gestureControlImg,
   header: "Gesture controlled site",
   type: "Web development",

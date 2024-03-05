@@ -131,7 +131,6 @@ const Modal = ({ isOpen, onClose }) => {
                 name="message"
                 style={{
                   resize: "none",
-                  height: "8vh",
                 }}
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}

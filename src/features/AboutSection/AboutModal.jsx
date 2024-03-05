@@ -47,6 +47,11 @@ const Modal = ({ isOpen, onClose }) => {
   return (
     <div className="modal-overlay">
       <div className="modal">
+        {window.innerWidth <= 1024 ? (
+          <button className="modal-close" onClick={onClose}>
+            X
+          </button>
+        ) : null}
         <div className="about-me-container">
           <div className="about-me-info-container">
             <h1>About me</h1>
@@ -78,9 +83,12 @@ const Modal = ({ isOpen, onClose }) => {
           </div>
         </div>
         <div className="middle-container">
-          <button className="modal-close" onClick={onClose}>
-            X
-          </button>
+          {window.innerWidth <= 1024 ? null : (
+            <button className="modal-close" onClick={onClose}>
+              X
+            </button>
+          )}
+
           <div className="dividers-container">
             <div className="divider-one"></div>
             <div className="divider-two"></div>

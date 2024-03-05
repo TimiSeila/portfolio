@@ -109,3 +109,126 @@
   margin-top: 6vh;
   font-size: 4vw;
 }
+
+/* Phone and tablet */
+@media only screen and (max-width: 1024px) {
+  .project-number {
+    font-size: 6vh;
+  }
+  .project-in-progress-text {
+    font-size: 2vh;
+  }
+  .project-content-container {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .project-media-container * {
+    height: 20vh;
+  }
+
+  .project-content-divider {
+    display: none;
+  }
+
+  .project-info-container {
+    align-items: center;
+    width: 90%;
+  }
+
+  .project-info-container h1 {
+    text-align: center;
+    font-size: 6vw;
+  }
+
+  .project-desc-container {
+    align-items: center;
+  }
+
+  .project-desc-container h2 {
+    text-align: center;
+    font-size: 4vw;
+  }
+
+  .project-desc-container p {
+    text-align: center;
+    font-size: 3vw;
+  }
+
+  .tech-icon {
+    margin-top: 2vh;
+    font-size: 12vw;
+    align-self: center;
+    text-align: center;
+  }
+
+  .demo-btn {
+    font-size: 6vw;
+    padding: 2vh 6vw;
+  }
+
+  .source-link {
+    font-size: 4vw;
+  }
+}
+
+@media (orientation: landscape) and (max-width: 1024px) {
+  .project-number {
+    font-size: 6vh;
+  }
+  .project-in-progress-text {
+    font-size: 2vh;
+  }
+  .project-content-container {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .project-media-container * {
+    height: 20vh;
+  }
+
+  .project-content-divider {
+    display: none;
+  }
+
+  .project-info-container {
+    align-items: center;
+    width: 90%;
+  }
+
+  .project-info-container h1 {
+    text-align: center;
+    font-size: 6vh;
+  }
+
+  .project-desc-container {
+    align-items: center;
+  }
+
+  .project-desc-container h2 {
+    text-align: center;
+    font-size: 4vh;
+  }
+
+  .project-desc-container p {
+    text-align: center;
+    font-size: 3vh;
+  }
+
+  .tech-icon {
+    margin-top: 2vh;
+    font-size: 12vh;
+    align-self: center;
+    text-align: center;
+  }
+
+  .demo-btn {
+    font-size: 6vh;
+    padding: 2vh 6vw;
+  }
+
+  .source-link {
+    font-size: 4vh;
+  }
+}

@@ -161,3 +161,146 @@
   background-color: #34c45a;
   cursor: pointer;
 }
+
+/* Phone and tablet */
+@media only screen and (max-width: 1024px) {
+  .modal {
+    flex-direction: column;
+    height: 90%;
+    width: 85%;
+  }
+
+  .modal-close {
+    font-size: 4vw;
+  }
+
+  .about-me-container {
+    width: 100%;
+    height: min-content;
+    margin: 0;
+    align-items: center;
+  }
+
+  .about-me-info-container {
+    text-align: center;
+  }
+
+  .about-me-info-container h1 {
+    font-size: 4vh;
+  }
+
+  .about-me-info-container p {
+    font-size: 1.2vh;
+  }
+
+  .about-me-technologies-container {
+    display: none;
+  }
+
+  .middle-container {
+    display: none;
+  }
+
+  .contact-me-container {
+    width: 100%;
+    height: min-content;
+    align-items: center;
+  }
+
+  .contact-me-container h1 {
+    font-size: 4vh;
+  }
+
+  .contact-me-container p {
+    display: none;
+  }
+
+  .contact-me-container form {
+    align-items: center;
+  }
+
+  .contact-me-container label {
+    align-items: center;
+    font-size: 1.5vh;
+  }
+
+  .contact-me-inputfield {
+    font-size: 1.5vh;
+    text-align: left;
+  }
+
+  .contact-me-submit {
+    font-size: 1.5vh;
+  }
+}
+
+@media (orientation: landscape) and (max-width: 1024px) {
+  .modal {
+    flex-direction: column;
+    height: 90%;
+    width: 85%;
+  }
+
+  .modal-close {
+    font-size: 4vh;
+  }
+
+  .about-me-container {
+    width: 100%;
+    height: min-content;
+    margin: 0;
+    align-items: center;
+  }
+
+  .about-me-info-container {
+    text-align: center;
+  }
+
+  .about-me-info-container h1 {
+    font-size: 4vh;
+  }
+
+  .about-me-info-container p {
+    font-size: 2vh;
+  }
+
+  .about-me-technologies-container {
+    display: none;
+  }
+
+  .middle-container {
+    display: none;
+  }
+
+  .contact-me-container {
+    width: 100%;
+    height: min-content;
+    align-items: center;
+  }
+
+  .contact-me-container h1 {
+    font-size: 4vh;
+  }
+
+  .contact-me-container p {
+    display: none;
+  }
+
+  .contact-me-container form {
+    align-items: center;
+  }
+
+  .contact-me-container label {
+    align-items: center;
+    font-size: 2.5vh;
+  }
+
+  .contact-me-inputfield {
+    font-size: 2.5vh;
+    text-align: left;
+  }
+
+  .contact-me-submit {
+    font-size: 2.5vh;
+  }
+}

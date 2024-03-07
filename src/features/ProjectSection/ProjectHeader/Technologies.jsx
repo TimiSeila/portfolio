@@ -1,8 +1,8 @@
 import React from "react";
 import { FaReact } from "react-icons/fa";
 import { IoLogoJavascript } from "react-icons/io5";
-import { IoLogoFirebase } from "react-icons/io5";
-import { FaUnity } from "react-icons/fa";
+import { IoLogoFirebase, IoLogoNodejs } from "react-icons/io5";
+import { FaUnity, FaGitAlt } from "react-icons/fa";
 
 const Technologies = ({ technologies, nameForClass }) => {
   const iconComponents = {
@@ -10,6 +10,14 @@ const Technologies = ({ technologies, nameForClass }) => {
     javascript: <IoLogoJavascript className={nameForClass} color="#f7df1e" />,
     firebase: <IoLogoFirebase className={nameForClass} color="#ffa000" />,
     unity: <FaUnity className={nameForClass} />,
+    git: <FaGitAlt className={nameForClass} color="f1502f" />,
+    nodejs: (
+      <IoLogoNodejs
+        className={nameForClass}
+        color="#68a063
+    "
+      />
+    ),
   };
 
   const filteredTechnologies = Object.keys(iconComponents).filter((tech) =>

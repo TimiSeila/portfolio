@@ -1,11 +1,12 @@
-import React, { useRef, useState } from "react";
-import "./AboutModal.css";
-import Technologies from "../ProjectSection/ProjectHeader/Technologies";
 import emailjs from "@emailjs/browser";
+import React, { useRef, useState } from "react";
+import Technologies from "../ProjectSection/ProjectHeader/Technologies";
+import "./AboutModal.css";
 
 //Modal component
 const Modal = ({ isOpen, onClose }) => {
   if (!isOpen) return null;
+  const [language, setLanguage] = useState("English");
 
   const contactForm = useRef();
 
@@ -55,34 +56,53 @@ const Modal = ({ isOpen, onClose }) => {
         <div className="about-me-container">
           <div className="about-me-info-container">
             <h1>About me</h1>
-            <p style={{ color: "#fff" }}>
-              Olen motivoitunut ohjelmistokehittäjä, jolla on vankka tekninen
-              osaaminen ja monipuolinen kokemus erilaisista projekteista. Olen
-              suorittamassa tieto- ja viestintätekniikan perustutkintoa Business
-              College Helsingissä, ja olen sitoutunut jatkamaan oppimista
-              alallani. Tavoitteenani on hyödyntää teknistä osaamistani ja
-              luovuuttani töissä ja tulevissa projekteissani. Olen nopea
-              oppimaan ja sisäistämää uusia asioita. Olen myös työskennellyt eri
-              projekteissa, mikä on antanut minulle laajan käsityksen eri
-              teknologioista ja ohjelmointikielistä. Olen valmis ottamaan
-              vastuuta ja kohtaamaan uusia haasteita. Innolla odotan
-              mahdollisuutta tuoda osaamiseni ja kokemukseni käyttöönne sekä
-              oppia lisää alastamme.
-            </p>
-            <p style={{ color: "#34c45a" }}>
-              I am a motivated software developer with a solid technical
-              background and diverse experience in various projects. I am
-              currently pursuing a degree in Software Development at Business
-              College Helsinki, and I am committed to continuous learning in my
-              field. My goal is to leverage my technical expertise and
-              creativity in my work and future projects. I am quick to learn and
-              grasp new concepts fast. I have also worked on different projects,
-              providing me with a broad understanding of various technologies
-              and programming languages. I am ready to take on responsibilities
-              and face new challenges. I am excited about the opportunity to
-              contribute my skills and experience to your team and to learn more
-              about our industry.
-            </p>
+            <button
+              className={`language-selector${
+                language == "English" ? "-active" : ""
+              }`}
+              onClick={() => setLanguage("English")}
+            >
+              EN
+            </button>
+            <button
+              className={`language-selector${
+                language == "Finnish" ? "-active" : ""
+              }`}
+              onClick={() => setLanguage("Finnish")}
+            >
+              FI
+            </button>
+            {language !== "English" ? (
+              <p>
+                Olen motivoitunut ohjelmistokehittäjä, jolla on vankka tekninen
+                osaaminen ja monipuolinen kokemus erilaisista projekteista. Olen
+                suorittamassa tieto- ja viestintätekniikan perustutkintoa
+                Business College Helsingissä, ja olen sitoutunut jatkamaan
+                oppimista alallani. Tavoitteenani on hyödyntää teknistä
+                osaamistani ja luovuuttani töissä ja tulevissa projekteissani.
+                Olen nopea oppimaan ja sisäistämää uusia asioita. Olen myös
+                työskennellyt eri projekteissa, mikä on antanut minulle laajan
+                käsityksen eri teknologioista ja ohjelmointikielistä. Olen
+                valmis ottamaan vastuuta ja kohtaamaan uusia haasteita. Innolla
+                odotan mahdollisuutta tuoda osaamiseni ja kokemukseni käyttöönne
+                sekä oppia lisää alastamme.
+              </p>
+            ) : (
+              <p>
+                I am a motivated software developer with a solid technical
+                background and diverse experience in various projects. I am
+                currently pursuing a degree in Software Development at Business
+                College Helsinki, and I am committed to continuous learning in
+                my field. My goal is to leverage my technical expertise and
+                creativity in my work and future projects. I am quick to learn
+                and grasp new concepts fast. I have also worked on different
+                projects, providing me with a broad understanding of various
+                technologies and programming languages. I am ready to take on
+                responsibilities and face new challenges. I am excited about the
+                opportunity to contribute my skills and experience to your team
+                and to learn more about our industry.
+              </p>
+            )}
           </div>
           <div className="about-me-technologies-container">
             <p className="tech-info">Technologies I'm familiar with</p>

@@ -27,6 +27,20 @@
   margin-bottom: 6vh;
 }
 
+.language-selector {
+  border: none;
+  outline: none;
+  background: none;
+  color: #34c45a;
+}
+
+.language-selector-active {
+  border: none;
+  outline: none;
+  background: none;
+  color: #ff8f5c;
+}
+
 .about-me-info-container {
   color: white;
 }
